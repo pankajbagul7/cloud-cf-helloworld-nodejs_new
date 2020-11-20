@@ -1,60 +1,9 @@
-ID: mta_SAPUI5POCModule
-_schema-version: '2.1'
-parameters:
-  deploy_mode: html5-repo
-version: 0.0.1
+_schema-version: 2.1.0
+ID: com.sap.piper.node.hello.world
+version: 1.0.0
+description: A Hello World sample application
+provider: SAP Sample generator
 modules:
-  - name: mta-sapui5pocmodule-approuter
-    type: approuter.nodejs
-    path: mta-sapui5pocmodule-approuter
-    parameters:
-      disk-quota: 256M
-      memory: 256M
-    requires:
-      - name: mta_SAPUI5POCModule_html5_repo_runtime
-      - name: uaa_mta_SAPUI5POCModule
-  - name: mta_SAPUI5POCModule_ui_deployer
-    type: com.sap.html5.application-content
-    path: mta_SAPUI5POCModule_ui_deployer
-    requires:
-      - name: mta_SAPUI5POCModule_html5_repo_host
-    build-parameters:
-      requires:
-        - name: SAPUI5POCModule
-          artifacts:
-            - './*'
-          target-path: resources/SAPUI5POCModule
-          
-  - name: SAPUI5POCModule
-    type: html5
-    path: SAPUI5POCModule
-    build-parameters:
-      builder: custom
-      commands:
-        - npm install
-        - npm run build
-      supported-platforms: []
-      build-result: dist
-  
-resources:
-  - name: mta_SAPUI5POCModule_html5_repo_runtime
-    parameters:
-      service-plan: app-runtime
-      service: html5-apps-repo
-    type: org.cloudfoundry.managed-service
-  - name: mta_SAPUI5POCModule_html5_repo_host
-    parameters:
-      service-plan: app-host
-      service: html5-apps-repo
-    type: org.cloudfoundry.managed-service
-  - name: uaa_mta_SAPUI5POCModule
-    parameters:
-      path: ./xs-security.json
-      service-plan: application
-      service: xsuaa
-    type: org.cloudfoundry.managed-service
-  - name: dest_mta_SAPUI5POCModule
-    parameters:
-      service-plan: lite
-      service: destination
-    type: org.cloudfoundry.managed-service
+  - name: piper.node.hello.world
+    type: nodejs
+    path: .
