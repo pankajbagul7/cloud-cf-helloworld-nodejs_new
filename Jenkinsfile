@@ -16,6 +16,12 @@ node() {
         echo "end of stage build"
     }
     
+    stage('deploy') {
+        echo "starting stage deploy"
+        cloudFoundryDeploy script: this              
+        echo "end of stage deploy"
+    }
+    
     
     
 }
