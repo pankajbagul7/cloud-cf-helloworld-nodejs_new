@@ -1,4 +1,3 @@
-      
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
