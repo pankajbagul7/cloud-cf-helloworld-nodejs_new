@@ -3,9 +3,9 @@ steps:
   mtaBuild:
     buildTarget: 'CF'
     script: this
-    cloudFoundryDeploy:
     verbose: true
-    deployTool: 'mtaDeployPlugin'
+    cloudFoundryDeploy:
+     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
     cloudFoundry:
         org: 'trial'
