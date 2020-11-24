@@ -1,10 +1,10 @@
 general:
+  verbose: true
 steps:
   mtaBuild:
     buildTarget: 'CF'
     script: this
-    verbose: true
-    cloudFoundryDeploy:
+      cloudFoundryDeploy:
      deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
     cloudFoundry:
