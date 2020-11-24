@@ -2,6 +2,7 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
+    script: this
     cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
