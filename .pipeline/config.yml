@@ -2,12 +2,10 @@ general:
   steps:
   mtaBuild:
     buildTarget: 'CF'
-    verbose: true
-    script: this
-      cloudFoundryDeploy:
-     deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
-    cloudFoundry:
+       script: this
+      cloudFoundry:
         org: 'trial'
         space: 'dev'
+        deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
         credentialsId: 'CF-jenkins-credentials-id'
