@@ -1,8 +1,12 @@
 @Library('piper-lib-os') _
 node() {
-    stage('prepare') {
+       stage('prepare') {
+        echo "starting stage prepare"
         checkout scm
-        setupCommonPipelineEnvironment script:this
+        echo "checkout scm successful"
+        fioriOnCloudPlatformPipeline script:this
+        // fioriOnCloudPlatformPipeline(script: this, customDefaults: '.pipeline/config.yml')
+        echo "end of stage prepare"
     }
     stage('build') {
         echo "starting stage build"
