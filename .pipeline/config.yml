@@ -2,9 +2,9 @@ general:
 steps:
   mtaBuild:
     buildTarget: 'CF'
-    cloudFoundry:
-        org: 'c85591detrial'
+  cloudFoundry:
+        org: '4683088dtrial'
         space: 'dev'
         credentialsId: 'CF-jenkins-credentials-id'
         cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
+  deployTool: 'mtaDeployPlugin'
