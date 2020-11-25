@@ -6,6 +6,6 @@ steps:
     deployTool: 'mtaDeployPlugin'
     verbose : true
     cloudFoundry:
-        org: 'trial'
+        org: 'c85591detrial'
         space: 'dev'
         credentialsId: 'CF-jenkins-credentials-id'
