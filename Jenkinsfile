@@ -4,8 +4,8 @@ node() {
         echo "starting stage prepare"
         checkout scm
         echo "checkout scm successful"
-        fioriOnCloudPlatformPipeline script:this
-        // fioriOnCloudPlatformPipeline(script: this, customDefaults: '.pipeline/config.yml')
+       // fioriOnCloudPlatformPipeline script:this
+       // fioriOnCloudPlatformPipeline(script: this, customDefaults: '.pipeline/config.yml')
         echo "end of stage prepare"
     }
     stage('build') {
@@ -18,10 +18,10 @@ node() {
         cloudFoundryDeploy script: this              
         echo "end of stage deploy"
     }
-       
+/*       
      stage('tmsUpload') {
         echo "starting tms Upload"
-        piperPipeline script:this
+        piperPipeline script:this  //tmsUploadConfig.yaml
         echo "end of tms upload"
-    }
+    }*/
 }
