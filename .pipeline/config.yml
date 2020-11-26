@@ -1,5 +1,4 @@
 steps:
-  buildTool: mta
   mtaBuild:
     buildTarget: 'CF'
   cloudFoundryDeploy:
@@ -11,11 +10,12 @@ steps:
       space: 'dev'
       credentialsId: 'CF-jenkins-credentials-id'
   tmsUpload:
+    buildTool: mta
     credentialsId: tms_secret_id
     nodeName: uat
     mtaPath: com.piper.example.tms.mtar
     customDescription: Custom-Transport-Description
-   
+    
 # uploading MTA extension descriptors, optional step
     mtaVersion: 1.0.0
 #    nodeExtDescriptorMapping:
