@@ -1,6 +1,3 @@
-general:
-  verbose: true
-  buildTool: mta
   steps:
     mtaBuild:
       buildTarget: 'CF'
@@ -15,7 +12,7 @@ general:
     tmsUpload:
       credentialsId: tms_secret_id
       nodeName: uat
-      mtaPath: .
+      mtaPath: 'com.sap.piper.node.hello.world.mtar'
       customDescription: Custom-Transport-Description
       buildTool: mta
   # uploading MTA extension descriptors, optional step
