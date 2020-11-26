@@ -1,6 +1,6 @@
 steps:
   mtaBuild:
-  buildTool: mta
+    buildTool: mta
     buildTarget: 'CF'
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
