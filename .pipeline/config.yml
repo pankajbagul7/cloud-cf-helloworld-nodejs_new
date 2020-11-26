@@ -12,7 +12,7 @@ steps:
   tmsUpload:
     credentialsId: tms_secret_id
     nodeName: uat
-    mtaPath: com.sap.piper.node.hello.world.mtar
+    mtaPath: 'com.sap.piper.node.hello.world.mtar'
     customDescription: Custom-Transport-Description
     
 # uploading MTA extension descriptors, optional step
