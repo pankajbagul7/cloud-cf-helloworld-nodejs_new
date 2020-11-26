@@ -1,12 +1,12 @@
-steps:
-  verbose:true
-  mtaBuild:
-    buildTarget: 'CF'
-  cloudFoundryDeploy:
-    deployTool: 'mtaDeployPlugin'
-    deployType: 'standard'
-    cloudFoundry:
-      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-      org: '4683088dtrial'
-      space: 'dev'
-      credentialsId: 'CF-jenkins-credentials-id'
+General:
+  steps:
+    mtaBuild:
+      buildTarget: 'CF'
+    cloudFoundryDeploy:
+      deployTool: 'mtaDeployPlugin'
+      deployType: 'standard'
+      cloudFoundry:
+        apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+        org: '4683088dtrial'
+        space: 'dev'
+        credentialsId: 'CF-jenkins-credentials-id'
