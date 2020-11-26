@@ -21,7 +21,7 @@ node() {
       
      stage('tmsUpload') {
         echo "starting tms Upload"
-        piperPipeline script:this  //tmsUploadConfig.yaml
+        piperPipeline script:this(script: this, customDefaults: '.pipeline/tmsUploadConfig.yaml') 
         echo "end of tms upload"
     }
 }
