@@ -1,0 +1,16 @@
+steps:
+  tmsUpload:
+    credentialsId: tms-secret-key
+    nodeName: PRE-PROD
+    mtaPath: com.piper.example.tms.mtar
+    customDescription: Custom-Transport-Description
+
+# uploading MTA extension descriptors, optional step
+    mtaVersion: 1.0.0
+    nodeExtDescriptorMapping:
+      PRE-PROD: 'scv_x_preprod.mtaext'
+      PROD: 'scv_x_prod.mtaext'
+      
+stages:
+  Release:
+    tmsUpload: true
