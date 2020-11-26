@@ -1,6 +1,7 @@
 steps:
   mtaBuild:
     buildTarget: 'CF'
+    buildTool: 'mta'
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
@@ -12,11 +13,11 @@ steps:
   tmsUpload:
     credentialsId: tms_secret_id
     nodeName: uat
-    mtaPath: 'com.sap.piper.node.hello.world.mtar'
+    mtaPath: com.piper.example.tms.mtar
     customDescription: Custom-Transport-Description
-    
+
 # uploading MTA extension descriptors, optional step
-     mtaVersion: 1.0.0
+    mtaVersion: 1.0.0
     nodeExtDescriptorMapping:
       PRE-PROD: 'scv_x_preprod.mtaext'
       PROD: 'scv_x_prod.mtaext'
