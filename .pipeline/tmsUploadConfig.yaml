@@ -1,7 +1,7 @@
 steps:
   tmsUpload:
     credentialsId: tms-secret-key
-    nodeName: PRE-PROD
+    nodeName: uat
     mtaPath: com.piper.example.tms.mtar
     customDescription: Custom-Transport-Description
 
