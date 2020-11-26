@@ -1,5 +1,6 @@
 steps:
   mtaBuild:
+  buildTool: mta
     buildTarget: 'CF'
   cloudFoundryDeploy:
     deployTool: 'mtaDeployPlugin'
@@ -12,14 +13,14 @@ steps:
   tmsUpload:
     credentialsId: tms_secret_id
     nodeName: uat
-    mtaPath:
+    mtaPath: .
     customDescription: Custom-Transport-Description
-    mtaVersion: 1.0.0
+    buildTool: mta
 # uploading MTA extension descriptors, optional step
-    
-#    nodeExtDescriptorMapping:
-#      PRE-PROD: 'scv_x_preprod.mtaext'
-#      PROD: 'scv_x_prod.mtaext'
+    mtaVersion: 1.0.0
+    nodeExtDescriptorMapping:
+      PRE-PROD: 'scv_x_preprod.mtaext'
+      PROD: 'scv_x_prod.mtaext'
 
 stages:
   Release:
