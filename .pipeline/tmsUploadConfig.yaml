@@ -10,7 +10,7 @@ steps:
     nodeExtDescriptorMapping:
       PRE-PROD: 'scv_x_preprod.mtaext'
       PROD: 'scv_x_prod.mtaext'
-      
+
 stages:
   Release:
     tmsUpload: true
