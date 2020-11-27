@@ -4,7 +4,7 @@ node() {
         echo "starting stage prepare"
         checkout scm
         echo "checkout scm successful"
-       // fioriOnCloudPlatformPipeline script:this
+        fioriOnCloudPlatformPipeline script:this
        // fioriOnCloudPlatformPipeline(script: this, customDefaults: '.pipeline/config.yml')
         echo "end of stage prepare"
     }
