@@ -9,3 +9,7 @@ steps:
       org: '4683088dtrial'
       space: 'dev'
       credentialsId: 'CF-jenkins-credentials-id'
+  tmsUpload:
+    credentialsId: tms_secret_id
+    nodeName: uat
+    mtaPath: com.sap.piper.node.hello.world.mtar
