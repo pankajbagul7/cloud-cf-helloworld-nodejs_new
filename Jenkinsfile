@@ -10,13 +10,12 @@ node() {
     }
        
      // this is currently WIP - need to be adjusted to pickup SonarQube properties file.  
-       /*
      stage('sonarScanner') {
         echo "starting SonarQube"
         sonarExecuteScan script: this
         echo "end of sonarQube"
     } 
-       */
+       
        
      stage('tmsUpload') {
         echo "starting tms Upload"
