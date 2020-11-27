@@ -19,10 +19,15 @@ node() {
         cloudFoundryDeploy script: this              
         echo "end of stage deploy"
     }*/
-      
+       
+     stage('sonarScanner') {
+        echo "starting SonarQube"
+        sonarExecuteScan script: this
+        echo "end of sonarQube"
+    } 
+       
      stage('tmsUpload') {
         echo "starting tms Upload"
-        //piperPipeline script:this
         tmsUpload script: this
         echo "end of tms upload"
     }
