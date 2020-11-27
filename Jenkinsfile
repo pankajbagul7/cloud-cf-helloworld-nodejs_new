@@ -8,23 +8,15 @@ node() {
        // fioriOnCloudPlatformPipeline(script: this, customDefaults: '.pipeline/config.yml')
         echo "end of stage prepare"
     }
- /* 
-    stage('build') {
-        echo "starting stage build"
-        mtaBuild script: this
-        echo "end of stage build"
-    }
-    stage('deploy') {
-        echo "starting stage deploy"
-        cloudFoundryDeploy script: this              
-        echo "end of stage deploy"
-    }*/
        
+     // this is currently WIP - need to be adjusted to pickup SonarQube properties file.  
+       /*
      stage('sonarScanner') {
         echo "starting SonarQube"
         sonarExecuteScan script: this
         echo "end of sonarQube"
     } 
+       */
        
      stage('tmsUpload') {
         echo "starting tms Upload"
