@@ -15,13 +15,11 @@ steps:
     nodeName: uat
     mtaPath: com.sap.piper.node.hello.world.mtar
     customDescription: Custom-Transport-Description
-    buildTool: 'mta'
 # uploading MTA extension descriptors, optional step
     mtaVersion: 1.0.0
     nodeExtDescriptorMapping:
       PRE-PROD: 'scv_x_preprod.mtaext'
       PROD: 'scv_x_prod.mtaext'
-      buildTool: 'mta'
 
 stages:
   Release:
