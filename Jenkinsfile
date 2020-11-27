@@ -22,7 +22,7 @@ node() {
       
      stage('tmsUpload') {
         echo "starting tms Upload"
-        piperPipeline script:this
+        //piperPipeline script:this
         echo "end of tms upload"
     }
 }
