@@ -13,3 +13,7 @@ steps:
     credentialsId: tms_secret_id
     nodeName: uat
     mtaPath: com.sap.piper.node.hello.world.mtar
+
+stages:
+  Release:
+    tmsUpload: true
