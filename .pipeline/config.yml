@@ -5,7 +5,7 @@ steps:
     deployTool: 'mtaDeployPlugin'
     deployType: 'standard'
     cloudFoundry:
-      org: '4683088dtrial'
       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+      org: '4683088dtrial'
       space: 'dev'
       credentialsId: 'CF-jenkins-credentials-id'
