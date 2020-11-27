@@ -9,10 +9,7 @@ steps:
       org: '4683088dtrial'
       space: 'dev'
       credentialsId: 'CF-jenkins-credentials-id'
-  sonarExecuteScan:
-    serverUrl: 'https://sqenterpriseqa.pgcloud.com/sonarqube'
-    projectKey: 'piper_key'
-    token: '003c949ac04b37296226aaff602d38bc5ef88e05'
+
   tmsUpload:
     credentialsId: tms_secret_id
     nodeName: uat
