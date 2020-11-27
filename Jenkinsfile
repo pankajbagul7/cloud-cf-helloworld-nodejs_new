@@ -8,6 +8,7 @@ node() {
        // fioriOnCloudPlatformPipeline(script: this, customDefaults: '.pipeline/config.yml')
         echo "end of stage prepare"
     }
+ /* 
     stage('build') {
         echo "starting stage build"
         mtaBuild script: this
@@ -18,7 +19,7 @@ node() {
         cloudFoundryDeploy script: this              
         echo "end of stage deploy"
     }
-/*       
+      
      stage('tmsUpload') {
         echo "starting tms Upload"
         piperPipeline script:this  //tmsUploadConfig.yaml
