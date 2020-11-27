@@ -18,11 +18,11 @@ node() {
         echo "starting stage deploy"
         cloudFoundryDeploy script: this              
         echo "end of stage deploy"
-    }
+    }*/
       
      stage('tmsUpload') {
         echo "starting tms Upload"
-        piperPipeline script:this  //tmsUploadConfig.yaml
+        piperPipeline script:this
         echo "end of tms upload"
-    }*/
+    }
 }
