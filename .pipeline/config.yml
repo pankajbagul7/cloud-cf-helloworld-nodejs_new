@@ -11,8 +11,8 @@ steps:
       credentialsId: 'CF-jenkins-credentials-id'
   sonarExecuteScan:
     serverUrl: 'https://sqenterpriseqa.pgcloud.com/sonarqube'
-    projectKey: 'SAPUI5_ZSCPPOC_Project'
-    token: '6a2ce0be142625e98676a94bdc083bd4d742df9d'
+    projectKey: 'CICD_project_key'
+    token: 'ddf5a2d6cf55a89b3cd776048465aed90fe42146'
   tmsUpload:
     credentialsId: tms_secret_id
     nodeName: uat
